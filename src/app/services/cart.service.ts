@@ -33,6 +33,7 @@ export class CartService {
 			showCloseButton: true
 		});
 		toast.present();
+		console.log(this.cart$.value);
 	}
 
 	removeCart(id) {

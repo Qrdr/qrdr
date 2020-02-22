@@ -1,0 +1,36 @@
+.item-image {
+	height: 50%;
+	object-fit: cover;
+}
+
+.tag-grid {
+	padding: 15px 0px 0px;
+}
+
+.tag-row {
+	overflow: auto;
+	padding: 0px 15px 0px;
+}
+
+.tag-row::-webkit-scrollbar {
+	width: 0px; /* For Chrome, Safari, and Opera */
+}
+
+.tag-column {
+	margin: 0px 10px 0px 0px;
+}
+
+.tag-chip {
+	margin: 0px;
+	pointer-events: none;
+}
+
+.description-text {
+	margin: 15px;
+}
+
+.add-to-cart-button,
+.remove-from-cart-button {
+	padding-left: 15px;
+	padding-right: 15px;
+}

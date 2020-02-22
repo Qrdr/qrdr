@@ -1,0 +1,46 @@
+<ion-header translucent>
+	<ion-toolbar>
+		<ion-title>{{ item.name }}</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="this.closeItemDetail()">Close</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-img *ngIf="item.image" class="item-image" [src]="item.image"></ion-img>
+	<ion-grid *ngIf="item.tags" class="tag-grid">
+		<ion-row nowrap class="tag-row">
+			<ion-col *ngFor="let tag of item.tags" class="tag-column" size="auto">
+				<ion-chip class="tag-chip">
+					<ion-label>{{ tag }}</ion-label>
+				</ion-chip>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-text *ngIf="item.description">
+		<p class="description-text">
+			{{ item.description }}
+		</p>
+	</ion-text>
+</ion-content>
+<ion-footer>
+	<ion-toolbar>
+		<ion-button
+			*ngIf="!fromCart"
+			class="add-to-cart-button"
+			expand="block"
+			(click)="this.cart.addCart(item)"
+		>
+			Add to Cart
+		</ion-button>
+		<ion-button
+			*ngIf="fromCart"
+			class="remove-from-cart-button"
+			expand="block"
+			(click)="this.removeCart(item.id)"
+		>
+			Remove from Cart
+		</ion-button>
+	</ion-toolbar>
+</ion-footer>

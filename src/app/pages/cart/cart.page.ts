@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ItemDetailPage } from '../item-detail/item-detail.page';
 import { CartService } from './../../services/cart.service';
 
 @Component({
@@ -15,13 +16,25 @@ export class CartPage implements OnInit {
 
 	public cart$ = this.cart.cart$;
 
+	ngOnInit() {}
+
 	closeCart() {
 		this.modalController.dismiss({
 			dismissed: true
 		});
 	}
 
-	ngOnInit() {}
+	async showItemDetail(menuItem) {
+		const modal = await this.modalController.create({
+			component: ItemDetailPage,
+			componentProps: {
+				item: menuItem,
+				fromCart: true
+			},
+			cssClass: 'pop-up-modal'
+		});
+		return await modal.present();
+	}
 
 	cartCost() {
 		let sum = 0;
