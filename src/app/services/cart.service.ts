@@ -30,7 +30,7 @@ export class CartService {
 			message: `Item added to cart: ${menuItem.name}`,
 			duration: 1000,
 			position: 'top',
-			showCloseButton: true
+			// showCloseButton: true
 		});
 		toast.present();
 	}

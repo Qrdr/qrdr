@@ -12,6 +12,8 @@ import { CartPageModule } from './pages/cart/cart.module';
 import { CartService } from './services/cart.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +24,9 @@ import { environment } from '../environments/environment';
     IonicStorageModule.forRoot(),
     AppRoutingModule,
     CartPageModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [
     StatusBar,
