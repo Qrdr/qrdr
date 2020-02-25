@@ -12,6 +12,7 @@ export class ItemDetailPage implements OnInit {
 	// Checks if the page is called from the cart
 	// If true, it changes the add to cart button to remove from cart
 	@Input() fromCart: boolean;
+	additionalInstructions: string = '';
 
 	constructor(
 		private cart: CartService,
@@ -20,10 +21,24 @@ export class ItemDetailPage implements OnInit {
 
 	ngOnInit() {}
 
+	getAdditionalInstructions() {
+		console.log(this.item);
+		if (this.item.additionalInstructions) {
+			return this.item.additionInstructions;
+		} else {
+			return '';
+		}
+	}
+
 	closeItemDetail() {
 		this.modalController.dismiss({
 			dismissed: true
 		});
+	}
+
+	addCart(cartItem, additionalInstructions) {
+		this.cart.addCart(cartItem, additionalInstructions);
+		this.closeItemDetail();
 	}
 
 	removeCart(cartItem) {

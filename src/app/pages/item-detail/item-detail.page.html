@@ -1,6 +1,6 @@
 <ion-header translucent>
 	<ion-toolbar>
-		<ion-title>{{ item.name }}</ion-title>
+		<ion-title class="item-title">{{ item.name }}</ion-title>
 		<ion-buttons slot="end">
 			<ion-button (click)="this.closeItemDetail()">Close</ion-button>
 		</ion-buttons>
@@ -23,6 +23,23 @@
 			{{ item.description }}
 		</p>
 	</ion-text>
+	<p class="additional-instructions-header">Additional Instructions</p>
+	<ion-textarea
+		*ngIf="!fromCart"
+		[(ngModel)]="additionalInstructions"
+		class="additional-instructions-input"
+		placeholder="Type here (extra sauce, gluten free, etc...)"
+		rows="5"
+		maxlength="250"
+	></ion-textarea>
+	<ion-textarea
+		*ngIf="fromCart"
+		[(ngModel)]="item.additionalInstructions"
+		class="additional-instructions-input"
+		placeholder="Type here (extra sauce, gluten free, etc...)"
+		rows="4"
+		maxlength="200"
+	></ion-textarea>
 </ion-content>
 <ion-footer>
 	<ion-toolbar>
@@ -30,7 +47,7 @@
 			*ngIf="!fromCart"
 			class="add-to-cart-button"
 			expand="block"
-			(click)="this.cart.addCart(item)"
+			(click)="this.addCart(item, additionalInstructions)"
 		>
 			Add to Cart
 		</ion-button>

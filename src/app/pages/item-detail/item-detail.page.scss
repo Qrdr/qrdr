@@ -1,5 +1,9 @@
+.item-title {
+	color: var(--ion-color-primary);
+}
+
 .item-image {
-	height: 50%;
+	height: 40%;
 	object-fit: cover;
 }
 
@@ -13,11 +17,14 @@
 }
 
 .tag-row::-webkit-scrollbar {
-	width: 0px; /* For Chrome, Safari, and Opera */
+	display: none;
+	//width: 0px; /* For Chrome, Safari, and Opera */
 }
 
 .tag-column {
-	margin: 0px 10px 0px 0px;
+	margin: 0px;
+	padding-right: 10px;
+	align-self: center;
 }
 
 .tag-chip {
@@ -27,6 +34,26 @@
 
 .description-text {
 	margin: 15px;
+}
+
+.additional-instructions-header {
+	padding-top: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	border-top: 1px solid var(--ion-color-medium);
+	color: var(--ion-color-primary);
+	//font-weight: bold;
+}
+
+.additional-instructions-input {
+	margin: 0px;
+	--background: '#333333';
+	--padding-top: 0px;
+	--padding-bottom: 15px;
+	--padding-start: 15px;
+	--padding-end: 15px;
+	--height: 80px;
 }
 
 .add-to-cart-button,

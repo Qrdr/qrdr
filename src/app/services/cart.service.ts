@@ -19,8 +19,10 @@ export class CartService {
 	}
 
 	//Adds menu item to the cart with an id and displays a toast of the item added
-	async addCart(menuItem) {
+	async addCart(menuItem, additionalInstructions = '') {
+		console.log(additionalInstructions);
 		let menuItemCopy = JSON.parse(JSON.stringify(menuItem));
+		menuItemCopy.additionalInstructions = additionalInstructions;
 		let cartCopy = [...this.cart$.value, menuItemCopy];
 		cartCopy.forEach((item, index) => {
 			item.id = index;
