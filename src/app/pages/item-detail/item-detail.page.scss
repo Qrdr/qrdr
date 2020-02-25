@@ -1,5 +1,6 @@
 .item-title {
 	color: var(--ion-color-primary);
+	font-weight: bold;
 }
 
 .item-image {
@@ -43,7 +44,7 @@
 	margin-bottom: 10px;
 	border-top: 1px solid var(--ion-color-medium);
 	color: var(--ion-color-primary);
-	//font-weight: bold;
+	font-weight: bold;
 }
 
 .additional-instructions-input {

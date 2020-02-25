@@ -1,6 +1,6 @@
 <ion-header translucent>
 	<ion-toolbar>
-		<ion-title>Cart</ion-title>
+		<ion-title class="cart-title">Cart</ion-title>
 		<ion-buttons slot="end">
 			<ion-button (click)="this.closeCart()">Close</ion-button>
 		</ion-buttons>
@@ -20,7 +20,7 @@
 							<ion-col size="2">
 								<ion-button
 									class="edit-button"
-									(click)="this.cart.removeCart(cartItem.id)"
+									(click)="this.cart.removeCart(cartItem.cartId)"
 								>
 									<ion-icon class="edit-icon" name="trash"></ion-icon>
 								</ion-button>
@@ -40,7 +40,7 @@
 		<ion-button
 			class="checkout-button"
 			expand="block"
-			(click)="this.checkout()"
+			(click)="this.cart.checkout()"
 		>
 			Checkout (${{ this.cartCost() }})
 		</ion-button>

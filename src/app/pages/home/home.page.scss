@@ -1,3 +1,17 @@
+.home-toolbar {
+	--background: var(--ion-color-primary);
+}
+
+.home-title {
+	--color: var(--ion-color-light);
+	font-weight: bold;
+}
+
+.header-image {
+	height: 35%;
+	object-fit: cover;
+}
+
 .home-content {
-  --padding-bottom: 150px;
+	--padding-bottom: 150px;
 }

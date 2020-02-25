@@ -43,9 +43,4 @@ export class CartPage implements OnInit {
 		});
 		return sum.toFixed(2);
 	}
-
-	//INSERT FIREBASE CODE HERE
-	checkout() {
-		alert('Checked Out!');
-	}
 }

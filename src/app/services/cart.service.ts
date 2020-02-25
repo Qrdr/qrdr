@@ -20,32 +20,42 @@ export class CartService {
 
 	//Adds menu item to the cart with an id and displays a toast of the item added
 	async addCart(menuItem, additionalInstructions = '') {
-		console.log(additionalInstructions);
-		let menuItemCopy = JSON.parse(JSON.stringify(menuItem));
-		menuItemCopy.additionalInstructions = additionalInstructions;
-		let cartCopy = [...this.cart$.value, menuItemCopy];
-		cartCopy.forEach((item, index) => {
-			item.id = index;
+		// Creates a copy of the menuItem
+		let cartItem = JSON.parse(JSON.stringify(menuItem));
+		// Adds any additionalInstructions to cartItem
+		cartItem.additionalInstructions = additionalInstructions;
+		// Updates cart and adds cartIds
+		let newCart = [...this.cart$.value, cartItem];
+		newCart.forEach((item, index) => {
+			item.cartId = index;
 		});
-		this.cart$.next(cartCopy);
+		this.cart$.next(newCart);
 		let toast = await this.toastController.create({
-			message: `Item added to cart: ${menuItem.name}`,
+			message: `${menuItem.name} Added`,
 			duration: 1000,
 			position: 'top',
-			showCloseButton: true
+			color: 'primary'
+			//showCloseButton: true
 		});
 		toast.present();
 		console.log(this.cart$.value);
 	}
 
-	removeCart(id) {
+	removeCart(cartId) {
 		let newCart = [...this.cart$.value];
 		newCart = newCart.filter((value, index) => {
-			return index != id;
+			return index != cartId;
 		});
 		newCart.forEach((item, index) => {
-			item.id = index;
+			item.cartId = index;
 		});
 		this.cart$.next(newCart);
+	}
+
+	//INSERT FIREBASE CODE HERE
+	checkout() {
+		let cartString = JSON.stringify(this.cart$.value);
+		console.log(cartString);
+		alert(cartString);
 	}
 }
