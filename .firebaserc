@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "qrdr-d63f0": {
+      "hosting": {
+        "app": [
+          "qrdr-d63f0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "qrdr-d63f0"
+  }
+}
