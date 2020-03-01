@@ -9,13 +9,22 @@
 					"itemId": 0,
 					"name": "French Fries",
 					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-					"price": 2.99
+					"price": 2.99,
+					"image": "https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+					"tags": ["Vegan", "Cooked in Peanut Oil"]
 				},
 				{
 					"type": "item",
 					"itemId": 1,
 					"name": "Salad",
-					"price": 4.99
+					"price": 4.99,
+					"tags": [
+						"Vegan",
+						"Healthy",
+						"Low Calorie",
+						"Contains Nuts",
+						"Not Spicy"
+					]
 				}
 			]
 		},
@@ -34,7 +43,8 @@
 							"itemId": 2,
 							"name": "Chicken Sandwich",
 							"description": "Fried chicken and bread",
-							"price": 5.99
+							"price": 5.99,
+							"image": "https://images.pexels.com/photos/236488/pexels-photo-236488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 						}
 					]
 				},
@@ -47,14 +57,16 @@
 							"itemId": 3,
 							"name": "Hamburger",
 							"description": "Ground beef and bread",
-							"price": 6.99
+							"price": 6.99,
+							"image": "https://images.pexels.com/photos/3168989/pexels-photo-3168989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 						},
 						{
 							"type": "item",
 							"itemId": 4,
 							"name": "Cheeseburger",
 							"description": "Cheese, ground beef, and bread",
-							"price": 7.99
+							"price": 7.99,
+							"image": "https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 						}
 					]
 				}

@@ -12,9 +12,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartPageModule } from './pages/cart/cart.module';
 import { ItemDetailPageModule } from './pages/item-detail/item-detail.module';
-import { CartService } from './services/cart.service';
+import { CartService } from './services/cart-service/cart.service';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { MenuService } from './services/menu-service/menu.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     IonicStorageModule.forRoot(),
     AppRoutingModule,
     CartPageModule,
+    ItemDetailPageModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
@@ -33,6 +35,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     StatusBar,
     SplashScreen,
     CartService,
+    MenuService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

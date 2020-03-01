@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Platform } from '@ionic/angular';
-import { CartService } from './services/cart.service';
+import { CartService } from './services/cart-service/cart.service';
 
 @Component({
   selector: 'app-root',

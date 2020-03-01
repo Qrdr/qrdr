@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { CartService } from './../../services/cart.service';
+import { CartService } from './../../services/cart-service/cart.service';
 
 @Component({
 	selector: 'app-item-detail',
@@ -19,7 +19,10 @@ export class ItemDetailPage implements OnInit {
 		private modalController: ModalController
 	) {}
 
-	ngOnInit() {}
+	ngOnInit(
+	) {
+		console.log(this.item)
+	}
 
 	getAdditionalInstructions() {
 		console.log(this.item);
