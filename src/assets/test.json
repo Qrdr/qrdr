@@ -3,6 +3,7 @@
 		{
 			"type": "section",
 			"name": "Appetizers",
+			"description": "Our appetizers are amazing",
 			"children": [
 				{
 					"type": "item",
@@ -11,7 +12,7 @@
 					"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 					"price": 2.99,
 					"image": "https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-					"tags": ["Vegan", "Cooked in Peanut Oil"]
+					"tags": ["Featured", "Vegan", "Cooked in Peanut Oil"]
 				},
 				{
 					"type": "item",
@@ -22,8 +23,8 @@
 						"Vegan",
 						"Healthy",
 						"Low Calorie",
-						"Contains Nuts",
-						"Not Spicy"
+						"Not Spicy",
+						"Contains Nuts"
 					]
 				}
 			]
@@ -44,7 +45,8 @@
 							"name": "Chicken Sandwich",
 							"description": "Fried chicken and bread",
 							"price": 5.99,
-							"image": "https://images.pexels.com/photos/236488/pexels-photo-236488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+							"image": "https://images.pexels.com/photos/236488/pexels-photo-236488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+							"tags": ["Featured"]
 						}
 					]
 				},
@@ -66,7 +68,8 @@
 							"name": "Cheeseburger",
 							"description": "Cheese, ground beef, and bread",
 							"price": 7.99,
-							"image": "https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+							"image": "https://images.pexels.com/photos/1556698/pexels-photo-1556698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+							"tags": ["Featured"]
 						}
 					]
 				}

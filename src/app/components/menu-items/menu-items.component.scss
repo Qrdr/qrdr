@@ -14,14 +14,11 @@
 .menu-item {
 	height: 100%;
 	width: 100%;
-	padding-left: 15px;
-	padding-right: 15px;
 	margin: 0px;
 }
 
 .item-grid {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px 0px;
 }
 
 .item-content-column {
@@ -30,11 +27,13 @@
 
 .name-label {
 	font-weight: bold;
-	--color: var(--ion-color-primary);
+	--color: black;
 }
 
 .price-label {
 	text-align: right;
+	font-weight: 600;
+	--color: var(--ion-color-primary);
 }
 
 .description-row {

@@ -1,0 +1,23 @@
+<ion-grid class="featured-grid">
+	<ion-row class="featured-row">
+		<ion-col
+			*ngFor="let menuItem of featuredItems$ | async"
+			class="featured-column"
+		>
+			<ion-card
+				class="featured-card"
+				[style.background-size]="cover"
+				[style.background-position]="center"
+				[style.background-image]="'url(' + menuItem.image + ')'"
+				(click)="this.showItemDetail($event, menuItem)"
+			>
+				<ion-card-header class="card-header">
+					<ion-card-title class="card-text">{{ menuItem.name }}</ion-card-title>
+				</ion-card-header>
+				<ion-button class="add-button" (click)="this.cart.addCart(menuItem)">
+					<ion-icon class="add-icon" name="add"></ion-icon>
+				</ion-button>
+			</ion-card>
+		</ion-col>
+	</ion-row>
+</ion-grid>

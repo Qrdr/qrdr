@@ -7,11 +7,28 @@
 </ion-header>
 
 <ion-content class="home-content" #scrollArea [scrollEvents]="true">
-	<ion-img class="header-image" src="../../../assets/images/header.png">
-	</ion-img>
-	<app-menu-list></app-menu-list>
+	<div class="top-content">
+		<ion-img class="header-image" src="../../../assets/images/header.png">
+		</ion-img>
+		<h1 *ngIf="featuredItems$.length !== 0">Featured Items</h1>
+		<app-featured-items
+			*ngIf="featuredItems$.length !== 0"
+		></app-featured-items>
+		<h1 *ngIf="featuredItems$.length !== 0">Full Menu</h1>
+		<app-menu-list></app-menu-list>
+	</div>
+	<div class="bottom-content">
+		<a
+			href="https://github.com/Qrdr/Qrdr"
+			target="_self"
+			style="text-decoration:none"
+		>
+			<p class="powered-text">powered by</p>
+			<ion-img class="logo" src="../../../assets/images/logo.svg"> </ion-img>
+		</a>
+	</div>
 </ion-content>
 
-<ion-footer>
+<ion-footer class="home-footer">
 	<app-cart-fab [appHideFab]="scrollArea" fabClass="cart-fab"> </app-cart-fab>
 </ion-footer>

@@ -1,33 +1,34 @@
 .cart-fab {
-  position: absolute;
-  margin-block-end: 25px;
+	position: fixed;
+	margin-left: -36px;
+	margin-block-end: 45px;
 }
 
 .cart-button {
-  width: 75px;
-  height: 75px;
+	width: 72px;
+	height: 72px;
 }
 
 .cart-icon {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  overflow: visible;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	overflow: visible;
 }
 
 .cart-badge {
-  margin: auto;
-  border-radius: 50%;
-  position: relative;
-  bottom: 14px;
-  left: 16px;
-  padding: 3px;
+	margin: auto;
+	border-radius: 50%;
+	position: relative;
+	bottom: 14px;
+	left: 16px;
+	padding: 3px;
 }
 
 .badge-number {
-  display: flex;
-  height: 15px;
-  width: 15px;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	height: 15px;
+	width: 15px;
+	justify-content: center;
+	align-items: center;
 }

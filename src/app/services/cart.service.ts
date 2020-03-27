@@ -34,7 +34,7 @@ export class CartService {
 			message: `${menuItem.name} Added`,
 			duration: 1000,
 			position: 'top',
-			color: 'primary'
+			color: 'light'
 			//showCloseButton: true
 		});
 		toast.present();

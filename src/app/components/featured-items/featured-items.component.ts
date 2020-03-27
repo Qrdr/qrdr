@@ -1,20 +1,30 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ModalController } from '@ionic/angular';
 import { ItemDetailPage } from './../../pages/item-detail/item-detail.page';
 import { CartService } from './../../services/cart.service';
+import { MenuService } from './../../services/menu.service';
 
 @Component({
-	selector: 'app-menu-items',
-	templateUrl: './menu-items.component.html',
-	styleUrls: ['./menu-items.component.scss']
+	selector: 'app-featured-items',
+	templateUrl: './featured-items.component.html',
+	styleUrls: ['./featured-items.component.scss']
 })
-export class MenuItemsComponent {
-	@Input() menuItems: any;
-
+export class FeaturedItemsComponent implements OnInit {
 	constructor(
+		private sanitizer: DomSanitizer,
+		private menu: MenuService,
 		private cart: CartService,
 		private modalController: ModalController
 	) {}
+
+	public featuredItems$ = this.menu.featuredItems$;
+
+	ngOnInit() {}
+
+	sanitizeStyle(unsafeStyle: string) {
+		return this.sanitizer.bypassSecurityTrustStyle(unsafeStyle);
+	}
 
 	// Does not show the model if the add-button is not clicked
 	async showItemDetail(event, menuItem) {

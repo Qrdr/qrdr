@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { CartPageModule } from './pages/cart/cart.module';
 import { ItemDetailPageModule } from './pages/item-detail/item-detail.module';
 import { CartService } from './services/cart.service';
+import { MenuService } from './services/menu.service';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -32,6 +33,7 @@ import { CartService } from './services/cart.service';
 		StatusBar,
 		SplashScreen,
 		CartService,
+		MenuService,
 		{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
 	],
 	bootstrap: [AppComponent]

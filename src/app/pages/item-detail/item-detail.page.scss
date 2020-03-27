@@ -5,6 +5,7 @@
 
 .item-image {
 	height: 40%;
+	object-position: center;
 	object-fit: cover;
 }
 
@@ -15,6 +16,7 @@
 .tag-row {
 	overflow: auto;
 	padding: 0px 15px 0px;
+	flex-wrap: nowrap;
 }
 
 .tag-row::-webkit-scrollbar {
@@ -31,6 +33,8 @@
 .tag-chip {
 	margin: 0px;
 	pointer-events: none;
+	background-color: var(--ion-color-primary);
+	--color: white;
 }
 
 .description-text {

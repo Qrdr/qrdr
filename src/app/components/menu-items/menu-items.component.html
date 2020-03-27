@@ -1,16 +1,14 @@
 <div *ngFor="let menuItem of menuItems.children" class="menu-item-loop">
 	<div *ngIf="menuItem.type === 'item'">
-		<ion-item class="ion-activatable">
+		<ion-item
+			class="ion-activatable"
+			(click)="this.showItemDetail($event, menuItem)"
+		>
 			<ion-ripple-effect></ion-ripple-effect>
 			<div class="menu-item">
 				<ion-grid class="item-grid menu-item-wrapper">
 					<ion-row nowrap>
-						<ion-col
-							class="item-content-column"
-							size="11"
-							align-items-center
-							(click)="this.showItemDetail(menuItem)"
-						>
+						<ion-col class="item-content-column" size="11" align-items-center>
 							<ion-row class="item-content-row">
 								<ion-col size="9">
 									<ion-label class="name-label">{{ menuItem.name }}</ion-label>
