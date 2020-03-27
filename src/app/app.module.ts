@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { CartPageModule } from './pages/cart/cart.module';
 import { ItemDetailPageModule } from './pages/item-detail/item-detail.module';
 import { CartService } from './services/cart.service';
+<<<<<<< HEAD
 import { MenuService } from './services/menu.service';
 
 @NgModule({
@@ -37,5 +38,30 @@ import { MenuService } from './services/menu.service';
 		{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
 	],
 	bootstrap: [AppComponent]
+=======
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
+    AppRoutingModule,
+    CartPageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    CartService,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+  bootstrap: [AppComponent]
+>>>>>>> b4effcafc77917a1a19791bc5280a1bae0bfb7d1
 })
 export class AppModule {}
