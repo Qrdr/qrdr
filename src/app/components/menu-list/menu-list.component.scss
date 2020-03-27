@@ -10,6 +10,8 @@ ion-item {
 
 ion-icon {
 	color: var(--ion-color-primary);
+	margin-right: 10px;
+	//margin-right: calc(10px - (27.195px - 15.3px) / 2);
 }
 
 .list-md,
