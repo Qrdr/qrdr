@@ -1,8 +1,11 @@
 <ion-grid class="featured-grid">
-	<ion-row class="featured-row">
+	<ion-row class="featured-row no-scrollbar">
 		<ion-col
 			*ngFor="let menuItem of featuredItems$ | async"
 			class="featured-column"
+			[ngClass]="{
+				'no-scrollbar': this.general.noMouse
+			}"
 		>
 			<ion-card
 				class="featured-card ion-activatable"

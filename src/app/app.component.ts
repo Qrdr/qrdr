@@ -21,6 +21,8 @@ export class AppComponent implements OnInit {
 		this.initializeApp();
 	}
 
+	public noMouse: boolean;
+
 	initializeApp() {
 		this.platform.ready().then(() => {
 			this.statusBar.styleDefault();

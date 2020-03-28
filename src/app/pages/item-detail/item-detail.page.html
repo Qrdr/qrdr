@@ -2,7 +2,9 @@
 	<ion-toolbar>
 		<ion-title class="item-title">{{ item.name }}</ion-title>
 		<ion-buttons slot="end">
-			<ion-button (click)="this.closeItemDetail()">Close</ion-button>
+			<ion-button (click)="this.closeItemDetail()">
+				<ion-icon class="close-icon" name="close"> </ion-icon>
+			</ion-button>
 		</ion-buttons>
 	</ion-toolbar>
 </ion-header>
@@ -10,7 +12,12 @@
 <ion-content>
 	<ion-img *ngIf="item.image" class="item-image" [src]="item.image"></ion-img>
 	<ion-grid *ngIf="item.tags" class="tag-grid">
-		<ion-row class="tag-row">
+		<ion-row
+			class="tag-row"
+			[ngClass]="{
+			'no-scrollbar': this.general.noMouse
+		}"
+		>
 			<ion-col *ngFor="let tag of item.tags" class="tag-column" size="auto">
 				<ion-chip class="tag-chip">
 					<ion-label>{{ tag }}</ion-label>
@@ -49,7 +56,7 @@
 			expand="block"
 			(click)="this.addCart(item, additionalInstructions)"
 		>
-			Add to Cart
+			Add to Cart (+${{item.price}})
 		</ion-button>
 		<ion-button
 			*ngIf="fromCart"
@@ -57,7 +64,7 @@
 			expand="block"
 			(click)="this.removeCart(item.cartId)"
 		>
-			Remove from Cart
+			Remove from Cart (-${{item.price}})
 		</ion-button>
 	</ion-toolbar>
 </ion-footer>

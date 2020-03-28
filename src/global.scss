@@ -71,9 +71,13 @@ ion-item {
 }
 
 .pop-up-modal {
-	--width: 95%;
-	--height: 95%;
+	padding: 5% 2.5% 0px 2.5%;
 	.modal-wrapper {
-		border-radius: 10px;
+		border-radius: 10px 10px 0px 0px;
 	}
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+	//width: 0px; /* For Chrome, Safari, and Opera */
 }

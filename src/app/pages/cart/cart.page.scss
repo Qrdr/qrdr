@@ -1,6 +1,15 @@
+.cart-toolbar {
+	--background: var(--ion-color-primary);
+}
+
 .cart-title {
-	color: var(--ion-color-primary);
+	font-size: larger;
+	color: white;
 	font-weight: bold;
+}
+
+.close-icon {
+	color: white;
 }
 
 .cart-item-loop {

@@ -1,8 +1,10 @@
-<ion-header translucent>
-	<ion-toolbar>
+<ion-header>
+	<ion-toolbar class="cart-toolbar">
 		<ion-title class="cart-title">Cart</ion-title>
 		<ion-buttons slot="end">
-			<ion-button (click)="this.closeCart()">Close</ion-button>
+			<ion-button (click)="this.closeCart()">
+				<ion-icon class="close-icon" name="close"> </ion-icon>
+			</ion-button>
 		</ion-buttons>
 	</ion-toolbar>
 </ion-header>

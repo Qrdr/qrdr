@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CartService } from './../../services/cart.service';
-
+import { GeneralService } from './../../services/general.service';
 @Component({
 	selector: 'app-item-detail',
 	templateUrl: './item-detail.page.html',
@@ -16,13 +16,14 @@ export class ItemDetailPage implements OnInit {
 
 	constructor(
 		private cart: CartService,
+		private general: GeneralService,
 		private modalController: ModalController
 	) {}
 
 	ngOnInit() {}
 
 	getAdditionalInstructions() {
-		console.log(this.item);
+		// console.log(this.item);
 		if (this.item.additionalInstructions) {
 			return this.item.additionInstructions;
 		} else {

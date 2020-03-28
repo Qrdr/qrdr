@@ -3,6 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ModalController } from '@ionic/angular';
 import { ItemDetailPage } from './../../pages/item-detail/item-detail.page';
 import { CartService } from './../../services/cart.service';
+import { GeneralService } from './../../services/general.service';
 import { MenuService } from './../../services/menu.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class FeaturedItemsComponent implements OnInit {
 		private sanitizer: DomSanitizer,
 		private menu: MenuService,
 		private cart: CartService,
+		private general: GeneralService,
 		private modalController: ModalController
 	) {}
 
